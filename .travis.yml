@@ -7,6 +7,7 @@ before_install:
 
 #when we just run below command without coverage, we wont command prompt. Thats
 # the reason we got incluse the -- --coverage option
+
 script:
-    -  docker run v2dev7/docker-react npm run test -- --coverage
+    -  docker run -e CI=true v2dev7/docker-react npm run test -- --coverage
 
